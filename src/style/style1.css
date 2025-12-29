@@ -1,0 +1,550 @@
+/* src/components/Competences.css */
+
+/* Variables */
+:root {
+  --bleu-fonce: #1e3a8a;
+  --bleu-moyen: #2563eb;
+  --bleu-clair: #3b82f6;
+  --bleu-tres-clair: #60a5fa;
+  --bleu-pale: #dbeafe;
+  --blanc: #ffffff;
+  --blanc-casse: #f8fafc;
+  --gris-clair: #f1f5f9;
+  --gris-moyen: #e2e8f0;
+  --ombre-portee: 0 20px 40px rgba(30, 58, 138, 0.15);
+  --ombre-legere: 0 4px 12px rgba(30, 58, 138, 0.1);
+  --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Section principale */
+.section-competences2 {
+  background: linear-gradient(135deg, var(--blanc) 0%, var(--bleu-pale) 100%);
+  padding: 5rem 1.5rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.conteneur-competences2 {
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 2;
+}
+
+/* En-tête */
+.en-tete-competences2 {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.badge-competences2 {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: linear-gradient(90deg, var(--bleu-clair), var(--bleu-moyen));
+  padding: 0.5rem 1.5rem;
+  border-radius: 2rem;
+  margin-bottom: 1.5rem;
+  box-shadow: var(--ombre-legere);
+}
+
+.badge-icone2 {
+  font-size: 1.2rem;
+}
+
+.badge-texte2 {
+  color: var(--blanc);
+  font-weight: 600;
+  font-size: 0.9rem;
+  letter-spacing: 1px;
+}
+
+.titre-principal2 {
+  font-size: 3rem;
+  font-weight: 800;
+  color: var(--bleu-fonce);
+  margin: 0 0 1rem 0;
+  line-height: 1.2;
+}
+
+.texte-bleu2 {
+  color: var(--bleu-moyen);
+}
+
+.sous-titre-competences2 {
+  font-size: 1.125rem;
+  color: #64748b;
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+/* Filtres catégories */
+.filtres-categories2 {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 3rem;
+}
+
+.bouton-categorie2 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 1rem 1.5rem;
+  background: var(--blanc);
+  border: 2px solid var(--gris-moyen);
+  border-radius: 1rem;
+  cursor: pointer;
+  transition: var(--transition);
+  min-width: 100px;
+  position: relative;
+}
+
+.bouton-categorie2:hover {
+  transform: translateY(-5px);
+  border-color: var(--bleu-clair);
+  box-shadow: var(--ombre-legere);
+}
+
+.bouton-categorie-actif2 {
+  background: var(--bleu-pale);
+  border-color: var(--bleu-clair);
+  box-shadow: var(--ombre-legere);
+  transform: translateY(-5px);
+}
+
+.icone-categorie2 {
+  font-size: 1.5rem;
+  margin-bottom: 0.25rem;
+}
+
+.nom-categorie2 {
+  font-weight: 600;
+  color: var(--bleu-fonce);
+  font-size: 0.9rem;
+}
+
+.indicateur-categorie2 {
+  position: absolute;
+  bottom: -8px;
+  width: 20px;
+  height: 4px;
+  background: var(--bleu-clair);
+  border-radius: 2px;
+}
+
+/* Conteneur cartes */
+.conteneur-cartes2 {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  margin-bottom: 4rem;
+}
+
+@media (min-width: 1024px) {
+  .conteneur-cartes2 {
+    grid-template-columns: 1fr 2fr;
+  }
+}
+
+/* Carte statistiques */
+.carte-statistiques2 {
+  background: var(--blanc);
+  border-radius: 1.5rem;
+  padding: 2rem;
+  box-shadow: var(--ombre-legere);
+}
+
+.en-tete-carte2 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.titre-carte2 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--bleu-fonce);
+  margin: 0;
+}
+
+.score-global2 {
+  font-size: 2rem;
+  font-weight: 800;
+  color: var(--bleu-moyen);
+}
+
+/* Graphique radial */
+.graphique-radial2 {
+  display: flex;
+  justify-content: center;
+  margin: 2rem 0;
+}
+
+.cercle-externe2 {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  background: conic-gradient(
+    var(--bleu-clair) 0% 65%,
+    var(--gris-clair) 65% 100%
+  );
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: rotation-lente 20s linear infinite;
+}
+
+.cercle-interne2 {
+  width: 140px;
+  height: 140px;
+  background: var(--blanc);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.pourcentage2 {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: var(--bleu-fonce);
+}
+
+@keyframes rotation-lente {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+/* Légende statistiques */
+.legende-statistiques2 {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.item-legende2 {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.point {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+}
+
+.point-expert2 {
+  background: var(--bleu-clair);
+}
+
+.point-intermediaire2 {
+  background: var(--bleu-moyen);
+}
+
+.point-debutant2 {
+  background: var(--bleu-tres-clair);
+}
+
+/* Carte compétences */
+.carte-competences2 {
+  background: var(--blanc);
+  border-radius: 1.5rem;
+  padding: 2rem;
+  box-shadow: var(--ombre-legere);
+}
+
+.titre-categorie2 {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.icone-categorie-active2 {
+  font-size: 1.5rem;
+}
+
+.nombre-competences2 {
+  color: var(--bleu-clair);
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+/* Liste compétences */
+.liste-competences2 {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin: 2rem 0;
+}
+
+.item-competence2 {
+  background: var(--blanc-casse);
+  border-radius: 1rem;
+  padding: 1.5rem;
+  border-left: 4px solid var(--bleu-clair);
+  transition: var(--transition);
+}
+
+.item-competence2:hover {
+  transform: translateX(5px);
+  box-shadow: var(--ombre-legere);
+}
+
+.info-competence2 {
+  margin-bottom: 1rem;
+}
+
+.nom-niveau2 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.75rem;
+}
+
+.nom-competence2 {
+  font-weight: 600;
+  color: var(--bleu-fonce);
+  font-size: 1.1rem;
+}
+
+.niveau-pourcentage2 {
+  font-weight: 700;
+  color: var(--bleu-moyen);
+  font-size: 1.2rem;
+}
+
+/* Barre de progression */
+.conteneur-barre2 {
+  height: 10px;
+  background: var(--gris-moyen);
+  border-radius: 5px;
+  overflow: hidden;
+  position: relative;
+}
+
+.barre-progression2 {
+  height: 100%;
+  border-radius: 5px;
+  position: relative;
+  transition: width 1.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.effet-lumiere2 {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 20px;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4));
+  animation: effet-lumiere 2s ease-in-out infinite;
+}
+
+@keyframes effet-lumiere {
+  0%, 100% { opacity: 0.5; }
+  50% { opacity: 1; }
+}
+
+/* Détails compétences */
+.details-competence2 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.label-niveau2 {
+  padding: 0.25rem 0.75rem;
+  border-radius: 1rem;
+  font-weight: 600;
+  font-size: 0.8rem;
+}
+
+.label-niveau2.expert {
+  background: var(--bleu-pale);
+  color: var(--bleu-clair);
+}
+
+.label-niveau2.intermediaire {
+  background: rgba(37, 99, 235, 0.1);
+  color: var(--bleu-moyen);
+}
+
+.label-niveau2.debutant {
+  background: rgba(96, 165, 250, 0.1);
+  color: var(--bleu-tres-clair);
+}
+
+.nombre-projets2 {
+  color: #64748b;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+/* Note catégorie */
+.note-categorie2 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 1.5rem;
+  border-top: 2px solid var(--gris-clair);
+  margin-top: 2rem;
+}
+
+.moyenne-categorie2 {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.label-moyenne2 {
+  color: #64748b;
+  font-weight: 500;
+}
+
+.valeur-moyenne2 {
+  font-weight: 700;
+  color: var(--bleu-moyen);
+  font-size: 1.5rem;
+}
+
+.etoiles-categorie2 {
+  display: flex;
+  gap: 0.25rem;
+}
+
+.etoile2 {
+  font-size: 1.2rem;
+  color: var(--gris-moyen);
+}
+
+.etoile2.pleine {
+  color: #fbbf24;
+}
+
+/* Technologies fréquentes */
+.section-technologies2 {
+  margin-bottom: 4rem;
+}
+
+.titre-technologies2 {
+  text-align: center;
+  color: var(--bleu-fonce);
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+}
+
+.liste-technologies2 {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.badge-technologie2 {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.25rem;
+  background: var(--blanc);
+  border: 2px solid;
+  border-radius: 2rem;
+  box-shadow: var(--ombre-legere);
+  transition: var(--transition);
+}
+
+.badge-technologie2:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--ombre-portee);
+}
+
+.point-couleur2 {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+}
+
+.nom-technologie2 {
+  font-weight: 600;
+  color: var(--bleu-fonce);
+  font-size: 0.9rem;
+}
+
+/* Décoration */
+.decoration-competences2 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.forme {
+  position: absolute;
+  border-radius: 50%;
+  opacity: 0.1;
+  filter: blur(40px);
+}
+
+.forme-12 {
+  width: 300px;
+  height: 300px;
+  background: var(--bleu-clair);
+  top: 10%;
+  right: -100px;
+}
+
+.forme-22 {
+  width: 400px;
+  height: 400px;
+  background: var(--bleu-moyen);
+  bottom: 10%;
+  left: -200px;
+}
+
+.forme-32 {
+  width: 200px;
+  height: 200px;
+  background: var(--bleu-tres-clair);
+  top: 50%;
+  right: 20%;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .titre-principal2 {
+    font-size: 2.2rem;
+  }
+  
+  .conteneur-cartes2 {
+    grid-template-columns: 1fr;
+  }
+  
+  .filtres-categories2 {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  
+  .bouton-categorie2 {
+    flex-direction: row;
+    justify-content: center;
+    min-width: auto;
+  }
+  
+  .note-categorie2 {
+    flex-direction: column;
+    gap: 1rem;
+    align-items: flex-start;
+  }
+  
+  .liste-technologies2 {
+    justify-content: flex-start;
+  }
+}

@@ -1,0 +1,814 @@
+/* src/components/Realisations.css */
+
+/* Variables */
+:root {
+  --bleu-fonce: #1e3a8a;
+  --bleu-moyen: #2563eb;
+  --bleu-clair: #3b82f6;
+  --bleu-tres-clair: #60a5fa;
+  --bleu-pale: #dbeafe;
+  --blanc: #ffffff;
+  --blanc-casse: #f8fafc;
+  --gris-clair: #f1f5f9;
+  --gris-moyen: #e2e8f0;
+  --vert: #10b981;
+  --orange: #f59e0b;
+  --rouge: #ef4444;
+  --ombre-portee: 0 20px 40px rgba(30, 58, 138, 0.15);
+  --ombre-legere: 0 4px 12px rgba(30, 58, 138, 0.1);
+  --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Section principale */
+.section-realisations {
+  background: var(--blanc-casse);
+  padding: 5rem 1.5rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.conteneur-realisations {
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 2;
+}
+
+/* En-tête */
+.en-tete-realisations {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.badge-realisations {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: linear-gradient(90deg, var(--bleu-clair), var(--bleu-moyen));
+  padding: 0.5rem 1.5rem;
+  border-radius: 2rem;
+  margin-bottom: 1.5rem;
+  box-shadow: var(--ombre-legere);
+}
+
+.badge-icone {
+  font-size: 1.2rem;
+}
+
+.badge-texte {
+  color: var(--blanc);
+  font-weight: 600;
+  font-size: 0.9rem;
+  letter-spacing: 1px;
+}
+
+.titre-principal {
+  font-size: 3rem;
+  font-weight: 800;
+  color: var(--bleu-fonce);
+  margin: 0 0 1rem 0;
+  line-height: 1.2;
+}
+
+.texte-bleu {
+  color: var(--bleu-moyen);
+}
+
+.sous-titre-realisations {
+  font-size: 1.125rem;
+  color: #64748b;
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+/* Boutons d'affichage mobile */
+.bouton-affichage-mobile {
+  display: none;
+  width: 100%;
+  padding: 1rem 1.5rem;
+  margin: 1rem 0;
+  background: var(--bleu-pale);
+  border: 2px solid var(--bleu-clair);
+  border-radius: 1rem;
+  color: var(--bleu-fonce);
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: var(--transition);
+  align-items: center;
+  gap: 1rem;
+}
+
+.bouton-affichage-mobile:hover {
+  background: var(--bleu-clair);
+  color: var(--blanc);
+}
+
+.bouton-projets-toggle {
+  display: none;
+  width: 100%;
+  padding: 1rem 1.5rem;
+  margin: 1rem 0 2rem 0;
+  background: var(--bleu-pale);
+  border: 2px solid var(--bleu-clair);
+  border-radius: 1rem;
+  color: var(--bleu-fonce);
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: var(--transition);
+  align-items: center;
+  gap: 1rem;
+}
+
+.bouton-projets-toggle:hover {
+  background: var(--bleu-clair);
+  color: var(--blanc);
+}
+
+.icone-bouton {
+  font-size: 1.2rem;
+  font-weight: bold;
+  transition: transform 0.3s ease;
+}
+
+.bouton-affichage-mobile:hover .icone-bouton,
+.bouton-projets-toggle:hover .icone-bouton {
+  transform: scale(1.1);
+}
+
+.texte-bouton {
+  flex: 1;
+  text-align: left;
+}
+
+.badge-nombre {
+  background: var(--bleu-moyen);
+  color: var(--blanc);
+  padding: 0.25rem 0.75rem;
+  border-radius: 1rem;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+/* Statistiques */
+.statistiques-realisations {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+  margin-bottom: 4rem;
+}
+
+.carte-stat {
+  background: var(--blanc);
+  border-radius: 1rem;
+  padding: 1.5rem;
+  text-align: center;
+  box-shadow: var(--ombre-legere);
+  transition: var(--transition);
+  border-top: 4px solid var(--bleu-clair);
+}
+
+.carte-stat:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--ombre-portee);
+}
+
+.valeur-stat {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: var(--bleu-moyen);
+  margin-bottom: 0.5rem;
+}
+
+.label-stat {
+  color: #64748b;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+/* Filtres */
+.filtres-categories {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 3rem;
+}
+
+.bouton-filtre {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.75rem 1.5rem;
+  background: var(--blanc);
+  border: 2px solid var(--gris-moyen);
+  border-radius: 2rem;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.bouton-filtre:hover {
+  transform: translateY(-3px);
+  border-color: var(--bleu-clair);
+  box-shadow: var(--ombre-legere);
+}
+
+.bouton-filtre-actif {
+  background: var(--bleu-pale);
+  border-color: var(--bleu-clair);
+  box-shadow: var(--ombre-legere);
+  transform: translateY(-3px);
+}
+
+.icone-filtre {
+  font-size: 1.25rem;
+}
+
+.texte-filtre {
+  font-weight: 600;
+  color: var(--bleu-fonce);
+  font-size: 0.9rem;
+}
+
+/* Grille des projets - visible par défaut sur desktop */
+.grille-projets {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-bottom: 4rem;
+}
+
+.carte-projet {
+  background: var(--blanc);
+  border-radius: 1.5rem;
+  overflow: hidden;
+  box-shadow: var(--ombre-legere);
+  transition: var(--transition);
+  cursor: pointer;
+  position: relative;
+}
+
+.carte-projet:hover {
+  transform: translateY(-10px);
+  box-shadow: var(--ombre-portee);
+}
+
+/* Badge statut */
+.badge-statut {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  padding: 0.25rem 0.75rem;
+  border-radius: 1rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  z-index: 2;
+}
+
+.badge-statut-terminé {
+  background: var(--vert);
+  color: white;
+}
+
+.badge-statut-en-cours {
+  background: var(--orange);
+  color: white;
+}
+
+/* Image du projet */
+.image-projet {
+  height: 200px;
+  position: relative;
+  overflow: hidden;
+}
+
+.image-contenu {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  transition: transform 0.5s ease;
+}
+
+.carte-projet:hover .image-contenu {
+  transform: scale(1.1);
+}
+
+.overlay-projet {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(30, 58, 138, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.carte-projet:hover .overlay-projet {
+  opacity: 1;
+}
+
+.texte-overlay {
+  color: var(--blanc);
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+/* Contenu projet */
+.contenu-projet {
+  padding: 1.5rem;
+}
+
+.en-tete-projet {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 1rem;
+}
+
+.titre-projet {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--bleu-fonce);
+  margin: 0;
+  line-height: 1.3;
+}
+
+.annee-projet {
+  background: var(--bleu-pale);
+  color: var(--bleu-moyen);
+  padding: 0.25rem 0.75rem;
+  border-radius: 1rem;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+.description-projet {
+  color: #64748b;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+/* Technologies */
+.technologies-projet {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.badge-technologie {
+  background: var(--bleu-pale);
+  color: var(--bleu-moyen);
+  padding: 0.25rem 0.75rem;
+  border-radius: 1rem;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+.badge-plus {
+  background: var(--gris-clair);
+  color: #64748b;
+  padding: 0.25rem 0.75rem;
+  border-radius: 1rem;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+/* Actions */
+.actions-projet {
+  display: flex;
+  gap: 1rem;
+}
+
+.bouton-details,
+.bouton-visiter {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  border-radius: 0.75rem;
+  font-weight: 600;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: var(--transition);
+  border: none;
+  text-decoration: none;
+}
+
+.bouton-details {
+  background: var(--blanc);
+  color: var(--bleu-moyen);
+  border: 2px solid var(--bleu-moyen);
+}
+
+.bouton-details:hover {
+  background: var(--bleu-pale);
+}
+
+.bouton-visiter {
+  background: var(--bleu-moyen);
+  color: var(--blanc);
+}
+
+.bouton-visiter:hover {
+  background: var(--bleu-clair);
+}
+
+.icone-details,
+.icone-visiter {
+  font-size: 1rem;
+}
+
+/* Aucune réalisation */
+.aucune-realisation {
+  text-align: center;
+  padding: 4rem 2rem;
+  background: var(--blanc);
+  border-radius: 1.5rem;
+  box-shadow: var(--ombre-legere);
+  margin-bottom: 4rem;
+}
+
+.icone-aucun {
+  font-size: 4rem;
+  margin-bottom: 1.5rem;
+  opacity: 0.5;
+}
+
+.aucune-realisation h3 {
+  color: var(--bleu-fonce);
+  margin-bottom: 0.5rem;
+}
+
+.aucune-realisation p {
+  color: #64748b;
+}
+
+/* Modale */
+.modale-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  padding: 1rem;
+  animation: apparition-modale 0.3s ease;
+}
+
+@keyframes apparition-modale {
+  from {
+    opacity: 0;
+    backdrop-filter: blur(0);
+  }
+  to {
+    opacity: 1;
+    backdrop-filter: blur(10px);
+  }
+}
+
+.modale-contenu {
+  background: var(--blanc);
+  border-radius: 1.5rem;
+  width: 100%;
+  max-width: 900px;
+  max-height: 90vh;
+  overflow-y: auto;
+  position: relative;
+  animation: glissement-modale 0.3s ease;
+}
+
+@keyframes glissement-modale {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.bouton-fermer {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  width: 40px;
+  height: 40px;
+  background: var(--blanc);
+  border: none;
+  border-radius: 50%;
+  font-size: 1.5rem;
+  cursor: pointer;
+  z-index: 10;
+  box-shadow: var(--ombre-legere);
+}
+
+.bouton-fermer:hover {
+  background: var(--gris-clair);
+}
+
+.modale-corps {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+@media (min-width: 768px) {
+  .modale-corps {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.modale-image {
+  height: 300px;
+  background-size: cover;
+  background-position: center;
+}
+
+@media (min-width: 768px) {
+  .modale-image {
+    height: 100%;
+    min-height: 500px;
+  }
+}
+
+.modale-infos {
+  padding: 2rem;
+}
+
+.modale-en-tete {
+  margin-bottom: 2rem;
+}
+
+.modale-titre {
+  font-size: 2rem;
+  font-weight: 800;
+  color: var(--bleu-fonce);
+  margin: 0 0 1rem 0;
+}
+
+.modale-metas {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.modale-annee {
+  background: var(--bleu-pale);
+  color: var(--bleu-moyen);
+  padding: 0.25rem 1rem;
+  border-radius: 1rem;
+  font-weight: 600;
+}
+
+.modale-statut {
+  padding: 0.25rem 1rem;
+  border-radius: 1rem;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.modale-statut-terminé {
+  background: var(--vert);
+  color: white;
+}
+
+.modale-statut-en-cours {
+  background: var(--orange);
+  color: white;
+}
+
+.modale-description,
+.modale-technologies,
+.modale-challenges {
+  margin-bottom: 2rem;
+}
+
+.modale-infos h3 {
+  color: var(--bleu-fonce);
+  font-size: 1.25rem;
+  margin-bottom: 1rem;
+}
+
+.liste-technologies-modale {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.badge-technologie-modale {
+  background: var(--bleu-pale);
+  color: var(--bleu-moyen);
+  padding: 0.5rem 1rem;
+  border-radius: 1rem;
+  font-weight: 600;
+}
+
+.liste-challenges {
+  padding-left: 1.5rem;
+  color: #64748b;
+}
+
+.liste-challenges li {
+  margin-bottom: 0.5rem;
+}
+
+.modale-actions {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.bouton-modale-principal,
+.bouton-modale-secondaire {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.75rem;
+  font-weight: 600;
+  cursor: pointer;
+  text-decoration: none;
+  border: none;
+}
+
+.bouton-modale-principal {
+  background: var(--bleu-moyen);
+  color: var(--blanc);
+}
+
+.bouton-modale-principal:hover {
+  background: var(--bleu-clair);
+}
+
+.bouton-modale-secondaire {
+  background: transparent;
+  color: var(--bleu-moyen);
+  border: 2px solid var(--bleu-moyen);
+}
+
+.bouton-modale-secondaire:hover {
+  background: var(--bleu-pale);
+}
+
+/* Décoration */
+.decoration-realisations {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.forme {
+  position: absolute;
+  border-radius: 50%;
+  opacity: 0.1;
+  filter: blur(40px);
+}
+
+.forme-1 {
+  width: 300px;
+  height: 300px;
+  background: var(--bleu-clair);
+  top: 10%;
+  right: -100px;
+}
+
+.forme-2 {
+  width: 400px;
+  height: 400px;
+  background: var(--bleu-moyen);
+  bottom: 10%;
+  left: -200px;
+}
+
+.forme-3 {
+  width: 200px;
+  height: 200px;
+  background: var(--bleu-tres-clair);
+  top: 50%;
+  right: 20%;
+}
+
+/* MEDIA QUERIES POUR LES ÉCRANS MOBILES */
+@media (max-width: 768px) {
+  .titre-principal {
+    font-size: 2.2rem;
+  }
+  
+  .grille-projets {
+    display: none; /* Masqué par défaut sur mobile */
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  
+  .statistiques-realisations {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .filtres-categories {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  
+  .bouton-filtre {
+    justify-content: center;
+  }
+  
+  /* Afficher les boutons sur mobile */
+  .bouton-affichage-mobile,
+  .bouton-projets-toggle {
+    display: flex;
+  }
+  
+  /* Masquer les statistiques, filtres et projets par défaut sur mobile */
+  .statistiques-realisations,
+  .filtres-categories,
+  .grille-projets,
+  .aucune-realisation {
+    display: none;
+  }
+  
+  /* Classes pour afficher le contenu quand activé */
+  .statistiques-realisations.statistiques-visible,
+  .filtres-categories.filtres-visible,
+  .grille-projets.projets-visible,
+  .aucune-realisation.projets-visible {
+    display: block;
+    animation: apparition-contenu 0.3s ease-out;
+  }
+  
+  /* Animation d'apparition */
+  @keyframes apparition-contenu {
+    from {
+      opacity: 0;
+      transform: translateY(-10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Pour la grille de projets */
+  .grille-projets.projets-visible {
+    display: grid;
+  }
+  
+  /* Pour les statistiques */
+  .statistiques-realisations.statistiques-visible {
+    display: grid;
+  }
+  
+  /* Pour les filtres */
+  .filtres-categories.filtres-visible {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  /* Style spécifique pour les boutons */
+  .bouton-statistiques {
+    margin-top: 0;
+    margin-bottom: 1rem;
+  }
+  
+  .bouton-filtres-toggle {
+    margin: 1rem 0 1rem 0;
+  }
+  
+  .bouton-projets-toggle {
+    margin: 1rem 0 1rem 0;
+  }
+  
+  /* Ajustements pour les cartes projet sur mobile */
+  .carte-projet {
+    margin-bottom: 1rem;
+  }
+  
+  .modale-corps {
+    grid-template-columns: 1fr;
+  }
+  
+  .modale-image {
+    height: 200px;
+  }
+  
+  .modale-actions {
+    flex-direction: column;
+  }
+}

@@ -1,0 +1,804 @@
+/* src/components/Parcours.css */
+
+/* Variables */
+:root {
+  --bleu-fonce: #1e3a8a;
+  --bleu-moyen: #2563eb;
+  --bleu-clair: #3b82f6;
+  --bleu-tres-clair: #60a5fa;
+  --bleu-pale: #dbeafe;
+  --vert: #10b981;
+  --vert-clair: #34d399;
+  --orange: #f59e0b;
+  --blanc: #ffffff;
+  --blanc-casse: #f8fafc;
+  --gris-clair: #f1f5f9;
+  --gris-moyen: #e2e8f0;
+  --ombre-portee: 0 20px 40px rgba(30, 58, 138, 0.15);
+  --ombre-legere: 0 4px 12px rgba(30, 58, 138, 0.1);
+  --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Section principale */
+.section-parcours {
+  background: linear-gradient(135deg, var(--blanc) 0%, var(--bleu-pale) 100%);
+  padding: 4rem 1.5rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.conteneur-parcours {
+  max-width: 1000px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 2;
+}
+
+/* En-tête */
+.en-tete-parcours {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.badge-parcours {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: linear-gradient(90deg, var(--bleu-clair), var(--bleu-moyen));
+  padding: 0.5rem 1.5rem;
+  border-radius: 2rem;
+  margin-bottom: 1.5rem;
+  box-shadow: var(--ombre-legere);
+}
+
+.badge-icone {
+  font-size: 1.2rem;
+}
+
+.badge-texte {
+  color: var(--blanc);
+  font-weight: 600;
+  font-size: 0.9rem;
+  letter-spacing: 1px;
+}
+
+.titre-principal {
+  font-size: 2.8rem;
+  font-weight: 800;
+  color: var(--bleu-fonce);
+  margin: 0 0 1rem 0;
+  line-height: 1.2;
+}
+
+.texte-ville {
+  color: var(--bleu-moyen);
+  position: relative;
+  display: inline-block;
+}
+
+.texte-ville::after {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: linear-gradient(90deg, var(--bleu-clair), transparent);
+  border-radius: 2px;
+}
+
+.sous-titre-parcours {
+  font-size: 1.125rem;
+  color: #64748b;
+  max-width: 600px;
+  margin: 0 auto 3rem;
+  line-height: 1.6;
+}
+
+/* Trajectoire visuelle */
+.trajectoire-visuelle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 3rem;
+  position: relative;
+}
+
+.point {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.point::before {
+  content: '';
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  position: absolute;
+  top: -90px;
+}
+
+.point-mboro::before {
+  background: linear-gradient(135deg, var(--vert-clair), var(--vert));
+  box-shadow: 0 10px 25px rgba(16, 185, 129, 0.3);
+}
+
+.point-ziguinchor::before {
+  background: linear-gradient(135deg, var(--bleu-clair), var(--bleu-moyen));
+  box-shadow: 0 10px 25px rgba(37, 99, 235, 0.3);
+}
+
+.point-label {
+  text-align: center;
+  font-weight: 600;
+  color: var(--bleu-fonce);
+  font-size: 0.9rem;
+  line-height: 1.3;
+  background: var(--blanc);
+  padding: 0.75rem 1.5rem;
+  border-radius: 2rem;
+  box-shadow: var(--ombre-legere);
+  border: 2px solid var(--gris-clair);
+  min-width: 150px;
+}
+
+.ligne-trajectoire {
+  flex: 1;
+  height: 4px;
+  background: linear-gradient(90deg, var(--vert), var(--bleu-moyen));
+  border-radius: 2px;
+  position: relative;
+  max-width: 200px;
+}
+
+.ligne-trajectoire::before {
+  content: '';
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  background: var(--blanc);
+  border: 3px solid var(--bleu-moyen);
+  border-radius: 50%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* Timeline académique */
+.timeline-academique {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  margin-bottom: 4rem;
+}
+
+.carte-etape {
+  background: var(--blanc);
+  border-radius: 1.5rem;
+  overflow: hidden;
+  box-shadow: var(--ombre-portee);
+  transition: var(--transition);
+}
+
+.carte-etape:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 25px 50px rgba(30, 58, 138, 0.2);
+}
+
+.en-tete-carte-etape {
+  padding: 1.5rem 2rem;
+  color: var(--blanc);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.annee-etape {
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+
+.diplome-etape {
+  background: rgba(255, 255, 255, 0.2);
+  padding: 0.5rem 1rem;
+  border-radius: 2rem;
+  font-weight: 600;
+  font-size: 0.9rem;
+  backdrop-filter: blur(10px);
+}
+
+/* Corps étape */
+.corps-etape {
+  padding: 2rem;
+}
+
+.icone-titre {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.icone-grande {
+  font-size: 3rem;
+  background: var(--gris-clair);
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.titre-etape {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--bleu-fonce);
+  margin: 0 0 0.5rem 0;
+}
+
+.institution-info {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.icone-institution {
+  font-size: 1.2rem;
+  color: var(--bleu-moyen);
+}
+
+.nom-institution {
+  font-weight: 600;
+  color: var(--bleu-fonce);
+  font-size: 1.1rem;
+}
+
+.lieu-institution {
+  color: #64748b;
+  font-size: 0.95rem;
+}
+
+.description-etape {
+  color: #64748b;
+  line-height: 1.7;
+  margin-bottom: 2rem;
+  font-size: 1.05rem;
+  padding: 1rem;
+  background: var(--blanc-casse);
+  border-radius: 1rem;
+  border-left: 4px solid var(--bleu-clair);
+}
+
+/* Boutons d'affichage mobile */
+.bouton-affichage-mobile {
+  display: none;
+  width: 100%;
+  padding: 1rem 1.5rem;
+  margin: 1rem 0;
+  background: var(--bleu-pale);
+  border: 2px solid var(--bleu-clair);
+  border-radius: 1rem;
+  color: var(--bleu-fonce);
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: var(--transition);
+  align-items: center;
+  gap: 1rem;
+}
+
+.bouton-affichage-mobile:hover {
+  background: var(--bleu-clair);
+  color: var(--blanc);
+}
+
+.icone-bouton {
+  font-size: 1.2rem;
+  font-weight: bold;
+  transition: transform 0.3s ease;
+}
+
+.bouton-affichage-mobile:hover .icone-bouton {
+  transform: scale(1.1);
+}
+
+.texte-bouton {
+  flex: 1;
+  text-align: left;
+}
+
+.badge-nombre {
+  background: var(--bleu-moyen);
+  color: var(--blanc);
+  padding: 0.25rem 0.75rem;
+  border-radius: 1rem;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+/* Compétences */
+.section-competences1 {
+  margin-bottom: 2rem;
+  display: block;
+}
+
+.titre-section-interne {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  color: var(--bleu-fonce);
+  font-size: 1.25rem;
+  margin-bottom: 1.5rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 2px solid var(--gris-clair);
+}
+
+.icone-titre-section {
+  font-size: 1.2rem;
+}
+
+.grille-competences {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 1rem;
+}
+
+.badge-competence1 {
+  background: var(--bleu-pale);
+  color: var(--bleu-moyen);
+  padding: 0.75rem 1rem;
+  border-radius: 0.75rem;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  transition: var(--transition);
+  border: 1px solid rgba(59, 130, 246, 0.2);
+}
+
+.badge-competence1:hover {
+  transform: translateY(-2px);
+  background: var(--bleu-clair);
+  color: var(--blanc);
+  box-shadow: var(--ombre-legere);
+}
+
+.icone-competence {
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+/* Modules */
+.section-modules {
+  margin-bottom: 2rem;
+  display: block;
+}
+
+.liste-modules {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 1rem;
+}
+
+.carte-module {
+  background: var(--blanc);
+  border-radius: 1rem;
+  padding: 1rem;
+  border: 2px solid var(--gris-clair);
+  transition: var(--transition);
+}
+
+.carte-module:hover {
+  border-color: var(--bleu-clair);
+  transform: translateY(-2px);
+}
+
+.en-tete-module {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.75rem;
+}
+
+.nom-module {
+  font-weight: 600;
+  color: var(--bleu-fonce);
+  font-size: 0.95rem;
+}
+
+.note-module {
+  background: var(--vert);
+  color: var(--blanc);
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 0.9rem;
+}
+
+.statut-module {
+  display: inline-block;
+  padding: 0.25rem 0.75rem;
+  border-radius: 1rem;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+.statut-module.valide {
+  background: var(--vert);
+  color: white;
+}
+
+.statut-module.en-cours {
+  background: var(--orange);
+  color: white;
+}
+
+/* Encart licence */
+.encart-licence {
+  background: linear-gradient(135deg, var(--bleu-pale), var(--blanc));
+  border-radius: 1rem;
+  padding: 1.5rem;
+  margin-top: 2rem;
+  border-left: 4px solid var(--bleu-clair);
+}
+
+.titre-encart {
+  font-weight: 700;
+  color: var(--bleu-fonce);
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.objectifs-liste {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+}
+
+.objectif {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.icone-objectif {
+  font-size: 1.5rem;
+  background: var(--bleu-clair);
+  color: var(--blanc);
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.titre-objectif {
+  font-weight: 600;
+  color: var(--bleu-fonce);
+  margin-bottom: 0.25rem;
+}
+
+.desc-objectif {
+  color: #64748b;
+  font-size: 0.9rem;
+  line-height: 1.4;
+}
+
+/* Projets académiques */
+.section-projets-academiques {
+  margin-bottom: 4rem;
+}
+
+.en-tete-projets {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.titre-section-grande {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  color: var(--bleu-fonce);
+  font-size: 2rem;
+  margin: 0 0 1rem 0;
+}
+
+.icone-titre-grande {
+  font-size: 2rem;
+}
+
+.sous-titre-projets {
+  color: #64748b;
+  font-size: 1.125rem;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* Grille des projets */
+.grille-projets {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.carte-projet-academique {
+  background: var(--blanc);
+  border-radius: 1.5rem;
+  padding: 2rem;
+  box-shadow: var(--ombre-legere);
+  transition: var(--transition);
+  position: relative;
+  border: 2px solid transparent;
+}
+
+.carte-projet-academique:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--ombre-portee);
+  border-color: var(--bleu-clair);
+}
+
+.statut-projet {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  padding: 0.25rem 0.75rem;
+  border-radius: 1rem;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+.statut-terminé {
+  background: var(--vert);
+  color: white;
+}
+
+.statut-en-cours {
+  background: var(--orange);
+  color: white;
+}
+
+.titre-projet {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--bleu-fonce);
+  margin: 0 0 0.5rem 0;
+}
+
+.annee-projet {
+  background: var(--bleu-pale);
+  color: var(--bleu-moyen);
+  display: inline-block;
+  padding: 0.25rem 0.75rem;
+  border-radius: 1rem;
+  font-weight: 600;
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+}
+
+.description-projet {
+  color: #64748b;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+.technologies-projet {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.badge-technologie-projet {
+  background: var(--gris-clair);
+  color: var(--bleu-fonce);
+  padding: 0.25rem 0.75rem;
+  border-radius: 1rem;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+/* Perspectives */
+.section-perspectives {
+  margin-bottom: 4rem;
+}
+
+.carte-perspectives {
+  background: linear-gradient(135deg, var(--bleu-moyen), var(--bleu-clair));
+  border-radius: 1.5rem;
+  padding: 3rem;
+  color: var(--blanc);
+}
+
+.en-tete-perspectives {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.icone-perspectives {
+  font-size: 2.5rem;
+}
+
+.titre-perspectives {
+  font-size: 2rem;
+  margin: 0;
+}
+
+.contenu-perspectives {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+}
+
+.objectif-futur {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.icone-objectif-futur {
+  font-size: 1.5rem;
+  background: rgba(255, 255, 255, 0.2);
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.titre-objectif-futur {
+  font-weight: 600;
+  font-size: 1.1rem;
+  margin-bottom: 0.25rem;
+}
+
+.desc-objectif-futur {
+  opacity: 0.9;
+  font-size: 0.95rem;
+  line-height: 1.4;
+}
+
+/* Citation finale */
+.citation-finale {
+  text-align: center;
+}
+
+.conteneur-citation {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.guillemets {
+  font-size: 4rem;
+  color: var(--bleu-moyen);
+  opacity: 0.3;
+  margin-bottom: 1rem;
+}
+
+.texte-citation {
+  font-size: 1.25rem;
+  line-height: 1.7;
+  color: var(--bleu-fonce);
+  font-style: italic;
+  margin-bottom: 1.5rem;
+}
+
+.signature-citation {
+  font-weight: 600;
+  color: var(--bleu-moyen);
+  font-size: 1.1rem;
+}
+
+/* MEDIA QUERIES POUR LES ÉCRANS MOBILES */
+@media (max-width: 768px) {
+  .titre-principal {
+    font-size: 2.2rem;
+  }
+  
+  .icone-titre {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+  
+  .grille-competences,
+  .liste-modules,
+  .objectifs-liste,
+  .grille-projets,
+  .contenu-perspectives {
+    grid-template-columns: 1fr;
+  }
+  
+  .trajectoire-visuelle {
+    flex-direction: column;
+    gap: 3rem;
+  }
+  
+  .ligne-trajectoire {
+    width: 4px;
+    height: 100px;
+    max-width: none;
+    max-height: 100px;
+  }
+  
+  .ligne-trajectoire::before {
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+  
+  .point::before {
+    width: 60px;
+    height: 60px;
+    top: -70px;
+  }
+  
+  .point-label {
+    min-width: 120px;
+    padding: 0.5rem 1rem;
+    font-size: 0.8rem;
+  }
+  
+  /* Afficher les boutons sur mobile */
+  .bouton-affichage-mobile {
+    display: flex;
+  }
+  
+  /* Masquer les compétences, modules et projets par défaut sur mobile */
+  .section-competences1,
+  .section-modules,
+  .grille-projets {
+    display: none;
+  }
+  
+  /* Classes pour afficher le contenu quand activé */
+  .section-competences1.competences-visible,
+  .section-modules.modules-visible,
+  .grille-projets.projets-visible {
+    display: block;
+    animation: apparition-contenu 0.3s ease-out;
+  }
+  
+  @keyframes apparition-contenu {
+    from {
+      opacity: 0;
+      transform: translateY(-10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Boutons spécifiques */
+  .bouton-competences {
+    margin-top: 1rem;
+  }
+  
+  .bouton-modules {
+    margin: 1rem 0;
+  }
+  
+  .bouton-projets {
+    margin: 2rem auto;
+    max-width: 300px;
+  }
+}
