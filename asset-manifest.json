@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/Abdourahmane-Diaw/static/css/main.793c882f.css",
-    "main.js": "/Abdourahmane-Diaw/static/js/main.26d3586c.js",
+    "main.js": "/Abdourahmane-Diaw/static/js/main.d280672c.js",
     "index.html": "/Abdourahmane-Diaw/index.html",
     "main.793c882f.css.map": "/Abdourahmane-Diaw/static/css/main.793c882f.css.map",
-    "main.26d3586c.js.map": "/Abdourahmane-Diaw/static/js/main.26d3586c.js.map"
+    "main.d280672c.js.map": "/Abdourahmane-Diaw/static/js/main.d280672c.js.map"
   },
   "entrypoints": [
     "static/css/main.793c882f.css",
-    "static/js/main.26d3586c.js"
+    "static/js/main.d280672c.js"
   ]
 }
