@@ -1,10 +1,10 @@
 {
   "files": {
-    "main.css": "/a09232952-bit/Abdourahmane-Diaw.git/static/css/main.793c882f.css",
-    "main.js": "/a09232952-bit/Abdourahmane-Diaw.git/static/js/main.26d3586c.js",
-    "index.html": "/a09232952-bit/Abdourahmane-Diaw.git/index.html",
-    "main.793c882f.css.map": "/a09232952-bit/Abdourahmane-Diaw.git/static/css/main.793c882f.css.map",
-    "main.26d3586c.js.map": "/a09232952-bit/Abdourahmane-Diaw.git/static/js/main.26d3586c.js.map"
+    "main.css": "/Abdourahmane-Diaw/static/css/main.793c882f.css",
+    "main.js": "/Abdourahmane-Diaw/static/js/main.26d3586c.js",
+    "index.html": "/Abdourahmane-Diaw/index.html",
+    "main.793c882f.css.map": "/Abdourahmane-Diaw/static/css/main.793c882f.css.map",
+    "main.26d3586c.js.map": "/Abdourahmane-Diaw/static/js/main.26d3586c.js.map"
   },
   "entrypoints": [
     "static/css/main.793c882f.css",
